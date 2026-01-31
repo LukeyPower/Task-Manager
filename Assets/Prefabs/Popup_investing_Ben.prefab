@@ -319,6 +319,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Popup_BounceMove
   speed: 80
   bottomOffset: 45
+  rightsideOffset: 30
+  leftsideOffset: 100
 --- !u!1 &5852384082081725897
 GameObject:
   m_ObjectHideFlags: 0

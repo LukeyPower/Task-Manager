@@ -13,6 +13,8 @@ public class Popup_BounceMove : MonoBehaviour
     private float objectHeight;
 
     public float bottomOffset = 40f;
+    public float rightsideOffset = 100f;
+    public float leftsideOffset = 40f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -37,7 +39,7 @@ public class Popup_BounceMove : MonoBehaviour
         rectTransform.anchoredPosition += direction * speed * Time.deltaTime;
 
         // Check for collisions with screen bounds with a bottom offset (to bring bounce hiehgt uo) and reverse direction
-        if (rectTransform.anchoredPosition.x + objectWidth > screenBounds.x || rectTransform.anchoredPosition.x - objectWidth < -screenBounds.x)
+        if (rectTransform.anchoredPosition.x + objectWidth > screenBounds.x + rightsideOffset || rectTransform.anchoredPosition.x - objectWidth < -screenBounds.x - leftsideOffset)
         {
             direction.x = -direction.x;
         }   

@@ -666,11 +666,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d946d79b9a517b4397180732fa4c9a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Popup_spawner
-  popupPrefab_1: {fileID: 2121728191474884871, guid: 9e8a983f06deabc469c49a021dd46c25, type: 3}
-  popupPrefab_2: {fileID: 8765499746707686733, guid: cb27f3135e483304b8af55d98b42160c, type: 3}
-  spawntime: 2
+  popupPrefabs:
+  - {fileID: 3744063709953177096, guid: 8ba99163a1e27fe4bb07d4d127072d38, type: 3}
+  - {fileID: 2121728191474884871, guid: 9e8a983f06deabc469c49a021dd46c25, type: 3}
+  - {fileID: 8765499746707686733, guid: cb27f3135e483304b8af55d98b42160c, type: 3}
+  spawnmaxtime: 4
   popupSound: {fileID: 8300000, guid: e34ff3de2e8649e4f89165fcd887b63c, type: 3}
   volume: 0.6
+  initialSpawnAmount: 7
 --- !u!4 &398025535
 Transform:
   m_ObjectHideFlags: 0
