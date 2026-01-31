@@ -317,8 +317,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd9e6ab68c1fa03408c3c3f684ae4df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Popup_BounceMove
-  speed: 150
-  bottomOffset: 100
+  speed: 80
+  bottomOffset: 45
 --- !u!1 &5852384082081725897
 GameObject:
   m_ObjectHideFlags: 0

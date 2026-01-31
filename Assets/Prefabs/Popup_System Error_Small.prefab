@@ -181,6 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 504179cf19e63ff4195a4e2ea0ac1089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Popup_window
+  popdownSound: {fileID: 0}
 --- !u!114 &9137697293186917614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,7 +194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd9e6ab68c1fa03408c3c3f684ae4df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Popup_BounceMove
-  speed: 150
+  speed: 180
+  bottomOffset: 45
 --- !u!1 &3911499321708012477
 GameObject:
   m_ObjectHideFlags: 0
