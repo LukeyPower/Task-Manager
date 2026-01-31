@@ -8,6 +8,9 @@ public class ClickEffectFade : MonoBehaviour
     public float lifetime = 2f;
     public float fadeDuration = 1f;
 
+    //add three audioclips for different click sounds
+    
+
     private UnityEngine.UI.Image sprite;
 
     void Awake()

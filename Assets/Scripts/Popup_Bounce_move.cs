@@ -12,7 +12,7 @@ public class Popup_BounceMove : MonoBehaviour
     private float objectWidth;
     private float objectHeight;
 
-    public float bottomOffset = 100f;
+    public float bottomOffset = 40f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
