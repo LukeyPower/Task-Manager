@@ -994,12 +994,12 @@
         },
         {
             "name": "Player1",
-            "id": "0168395f-8030-40d2-afd2-fc16253d5934",
+            "id": "a99aa707-8a0e-452b-a7c9-93b82307cb4e",
             "actions": [
                 {
                     "name": "Aim",
                     "type": "Value",
-                    "id": "ba4f1b2d-9668-482d-a638-7f5249e9a229",
+                    "id": "1eae551b-aa3a-412e-b96c-9b659edc1522",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -1008,7 +1008,7 @@
                 {
                     "name": "Fire",
                     "type": "Button",
-                    "id": "b6de0b89-d1d2-4a4d-ae37-64aff16643e1",
+                    "id": "2e308a08-03de-4977-a8dc-71d36a89cceb",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -1017,7 +1017,7 @@
                 {
                     "name": "Reload",
                     "type": "Button",
-                    "id": "ae13c237-9f2e-4193-9fa6-f33940c79699",
+                    "id": "54b37d0b-4df9-4301-8d38-56fe58134af7",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -1026,7 +1026,7 @@
                 {
                     "name": "Exit",
                     "type": "Button",
-                    "id": "5ff93cd6-4326-4199-86ca-fecb72930ef3",
+                    "id": "5da2a9f9-365c-47aa-87a6-bd156b2bffd5",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -1036,7 +1036,7 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "edfb8bbf-b844-45e4-8812-612e0dbfe85f",
+                    "id": "520bb3de-56b5-4d0e-b893-4dd26ccc1830",
                     "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
@@ -1047,7 +1047,7 @@
                 },
                 {
                     "name": "",
-                    "id": "41f35c7a-55b7-42d8-8660-770a9cc43e36",
+                    "id": "f04e0310-1438-4579-92e2-637b3f1ecb06",
                     "path": "<Joystick>/trigger",
                     "interactions": "",
                     "processors": "",
@@ -1058,7 +1058,7 @@
                 },
                 {
                     "name": "",
-                    "id": "8e62afed-5d03-417e-90e6-691dd14d435b",
+                    "id": "32f6111d-9e92-4cd8-ae72-996775bdbc13",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
@@ -1069,7 +1069,7 @@
                 },
                 {
                     "name": "",
-                    "id": "8b941df5-6f14-492b-82a8-29f4ebe1af85",
+                    "id": "1dfd439f-09bd-4ab6-a41c-cc14394d1cdf",
                     "path": "<HID::3AGAME 3A-3H Retro Shooter 1>/button4",
                     "interactions": "",
                     "processors": "",
@@ -1080,7 +1080,7 @@
                 },
                 {
                     "name": "",
-                    "id": "b0730426-4dc2-49ed-8028-d815eec0112e",
+                    "id": "c8a23513-fa99-4ffe-b108-dc8c2a69df9e",
                     "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
@@ -1091,7 +1091,7 @@
                 },
                 {
                     "name": "",
-                    "id": "7d19de98-be1e-4bb6-b673-3f2408f1ec07",
+                    "id": "764f8b0c-b669-4aa9-9d9d-c0b8fbbea200",
                     "path": "<Mouse>/middleButton",
                     "interactions": "",
                     "processors": "",
@@ -1102,7 +1102,7 @@
                 },
                 {
                     "name": "",
-                    "id": "ff827ca6-9e32-4f30-bb61-3138b100d998",
+                    "id": "5592b197-8a37-4a74-8315-846a02d11d5a",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
@@ -1113,7 +1113,7 @@
                 },
                 {
                     "name": "",
-                    "id": "af203d03-49ff-4fb3-aa0a-e6aae5a41f00",
+                    "id": "c3c674c5-66e0-4613-9030-9bc6d7d77143",
                     "path": "<Keyboard>/1",
                     "interactions": "",
                     "processors": "",

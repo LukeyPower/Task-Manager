@@ -8,6 +8,10 @@ public class PlayerInput : MonoBehaviour
     public float spawnZ = 10f;
     public Transform parentTransform;
 
+    public AudioClip[] gunshot;
+    private AudioSource audioSource;
+    public float volume = 1.0f;
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -26,6 +30,7 @@ public class PlayerInput : MonoBehaviour
 
 
             SpawnClickEffect();
+            gunshotaudio();
         }
     }
 
@@ -35,8 +40,24 @@ public class PlayerInput : MonoBehaviour
 
         Vector3 mousePos = Input.mousePosition;
 
-              
         Instantiate(clickEffectPrefab, mousePos, Quaternion.identity, UI_Manager.instance.transform);
+
+        
     }
+
+     void gunshotaudio()
+        {
+        //play randon gunshot from array
+        int randIndex = Random.Range(0, gunshot.Length);
+        audioSource.PlayOneShot(gunshot[randIndex], volume);
+
+    }
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
 }
+
+   
 

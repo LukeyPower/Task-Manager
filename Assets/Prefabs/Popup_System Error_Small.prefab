@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 8596228859503109549}
   - component: {fileID: 2357149130076688949}
   - component: {fileID: 878335060347223219}
+  - component: {fileID: 9137697293186917614}
   m_Layer: 5
   m_Name: Popup_System Error_Small
   m_TagString: Untagged
@@ -175,11 +176,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2121728191474884871}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 504179cf19e63ff4195a4e2ea0ac1089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Popup_window
+--- !u!114 &9137697293186917614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121728191474884871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd9e6ab68c1fa03408c3c3f684ae4df3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Popup_BounceMove
+  speed: 150
 --- !u!1 &3911499321708012477
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,7 +467,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: -15, y: -15, z: -15, w: -15}
+  m_RaycastPadding: {x: -25, y: -25, z: -25, w: -25}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
