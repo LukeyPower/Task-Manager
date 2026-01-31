@@ -9,7 +9,7 @@ public class ClickEffectFade : MonoBehaviour
     public float fadeDuration = 1f;
 
     //add three audioclips for different click sounds
-    
+
 
     private UnityEngine.UI.Image sprite;
 
@@ -17,6 +17,7 @@ public class ClickEffectFade : MonoBehaviour
     {
         sprite = GetComponent<UnityEngine.UI.Image>();
         StartCoroutine(FadeOut());
+
     }
 
     IEnumerator FadeOut()

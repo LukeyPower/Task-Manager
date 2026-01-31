@@ -2,42 +2,47 @@ using UnityEngine;
 
 public class Popup_spawner : MonoBehaviour
 {
-    //wvariables to spawn in popups
     public GameObject[] popupPrefabs;
-   
-    public float spawntime = 2f;
-    private float timer =2f;    
+
+    public float spawnmaxtime = 5f;
+    private float timer;
+    private float nextSpawnTime;
+
     public AudioClip popupSound;
     public float volume = 1.0f;
     private AudioSource audioSource;
 
-    public float initalspawnamount = 5f;
+    public int initialSpawnAmount = 5;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
 
-          //onawake spawn 5 random popupsPrefabs at random locations on the screen
-        for (int i = 0; i < initalspawnamount; i++)
+        // Set first random spawn time
+        nextSpawnTime = Random.Range(0f, spawnmaxtime);
+        timer = 0f;
+
+        // Spawn initial popups
+        for (int i = 0; i < initialSpawnAmount; i++)
         {
             int randIndex = Random.Range(0, popupPrefabs.Length);
             Instantiate(popupPrefabs[randIndex], UI_Manager.instance.transform);
         }
-
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //spawn a random prefab from the array between 1-5 seconds up to a max spawntime
-        timer -= Time.deltaTime;
-        if (timer <= 0f)
+        timer += Time.deltaTime;
+
+        if (timer >= nextSpawnTime)
         {
             int randIndex = Random.Range(0, popupPrefabs.Length);
             Instantiate(popupPrefabs[randIndex], UI_Manager.instance.transform);
-            timer = Random.Range(1f, spawntime);
+
             audioSource.PlayOneShot(popupSound, volume);
+
+            timer = 0f;
+            nextSpawnTime = Random.Range(0f, spawnmaxtime);
         }
     }
 }
