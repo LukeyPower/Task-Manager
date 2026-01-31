@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
 
 public class PlayerInput : MonoBehaviour
 {
@@ -10,6 +12,19 @@ public class PlayerInput : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            Mouse mouse = Mouse.current;
+            InputSystem.QueueStateEvent(mouse, new MouseState
+            {
+            position = Input.mousePosition,
+            buttons = 1 // left button pressed
+            });
+            InputSystem.QueueStateEvent(mouse, new MouseState
+            {
+            position = Input.mousePosition,
+            buttons = 0 // left button released
+            });
+
+
             SpawnClickEffect();
         }
     }

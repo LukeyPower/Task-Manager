@@ -993,13 +993,40 @@
             ]
         },
         {
-            "name": "TEST",
-            "id": "4b8c2621-b1a8-4d8f-9bd8-e59745840ec8",
+            "name": "Player1",
+            "id": "0168395f-8030-40d2-afd2-fc16253d5934",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "Aim",
+                    "type": "Value",
+                    "id": "ba4f1b2d-9668-482d-a638-7f5249e9a229",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Fire",
                     "type": "Button",
-                    "id": "c1d00f3a-f679-4c0f-a386-8f33781e7404",
+                    "id": "b6de0b89-d1d2-4a4d-ae37-64aff16643e1",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Reload",
+                    "type": "Button",
+                    "id": "ae13c237-9f2e-4193-9fa6-f33940c79699",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Exit",
+                    "type": "Button",
+                    "id": "5ff93cd6-4326-4199-86ca-fecb72930ef3",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -1009,23 +1036,89 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "645ce775-1be7-442d-ab1a-ceeedb2ee30b",
-                    "path": "",
+                    "id": "edfb8bbf-b844-45e4-8812-612e0dbfe85f",
+                    "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "New action",
+                    "groups": ";Keyboard&Mouse;Joystick",
+                    "action": "Aim",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "02d36904-9789-4140-97ff-ea2b5959c384",
-                    "path": "",
+                    "id": "41f35c7a-55b7-42d8-8660-770a9cc43e36",
+                    "path": "<Joystick>/trigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8e62afed-5d03-417e-90e6-691dd14d435b",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8b941df5-6f14-492b-82a8-29f4ebe1af85",
+                    "path": "<HID::3AGAME 3A-3H Retro Shooter 1>/button4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Joystick;Keyboard&Mouse",
+                    "action": "Reload",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b0730426-4dc2-49ed-8028-d815eec0112e",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Reload",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7d19de98-be1e-4bb6-b673-3f2408f1ec07",
+                    "path": "<Mouse>/middleButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Reload",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ff827ca6-9e32-4f30-bb61-3138b100d998",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Exit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "af203d03-49ff-4fb3-aa0a-e6aae5a41f00",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Joystick",
+                    "action": "Exit",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
