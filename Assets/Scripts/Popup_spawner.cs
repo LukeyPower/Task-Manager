@@ -30,19 +30,23 @@ public class Popup_spawner : MonoBehaviour
         }
     }
 
-    void Update()
+void Update()
+{
+    // 👇 NEW: stop spawning when game ends
+    if (Game_Manager.instance != null && Game_Manager.instance.gameEnded)
+        return;
+
+    timer += Time.deltaTime;
+
+    if (timer >= nextSpawnTime)
     {
-        timer += Time.deltaTime;
+        int randIndex = Random.Range(0, popupPrefabs.Length);
+        Instantiate(popupPrefabs[randIndex], UI_Manager.instance.transform);
 
-        if (timer >= nextSpawnTime)
-        {
-            int randIndex = Random.Range(0, popupPrefabs.Length);
-            Instantiate(popupPrefabs[randIndex], UI_Manager.instance.transform);
+        audioSource.PlayOneShot(popupSound, volume);
 
-            audioSource.PlayOneShot(popupSound, volume);
-
-            timer = 0f;
-            nextSpawnTime = Random.Range(0f, spawnmaxtime);
-        }
+        timer = 0f;
+        nextSpawnTime = Random.Range(0f, spawnmaxtime);
     }
+}
 }

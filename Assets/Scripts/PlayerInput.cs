@@ -7,6 +7,7 @@ public class PlayerInput : MonoBehaviour
     public GameObject clickEffectPrefab;
     public float spawnZ = 10f;
     public Transform parentTransform;
+    public int shotcount = 0;
 
     public AudioClip[] gunshot;
     private AudioSource audioSource;
@@ -31,6 +32,7 @@ public class PlayerInput : MonoBehaviour
 
             SpawnClickEffect();
             gunshotaudio();
+            shotcount++;
         }
     }
 
