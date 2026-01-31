@@ -5,6 +5,8 @@ public class Popup_window : MonoBehaviour
 public AudioClip popdownSound;
 private AudioSource audioSource;
 private GameObject audiomanager;
+
+
     public void ClosePopup()
     {
         Destroy(gameObject);
@@ -22,10 +24,14 @@ private GameObject audiomanager;
         //Unannote below ------
         popdownSound = Resources.Load<AudioClip>("popdown");
     }
+void OnEnable()
+{
+    Game_Manager.instance.RegisterPopup();
+}
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+void OnDestroy()
+{
+    if (Game_Manager.instance != null)
+        Game_Manager.instance.UnregisterPopup();
+}
 }
