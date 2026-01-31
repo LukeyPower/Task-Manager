@@ -5,7 +5,7 @@ public class Popup_spawner : MonoBehaviour
     //wvariables to spawn in popups
     public GameObject popupPrefab_1;
     public GameObject popupPrefab_2;
-
+    public GameObject popupPrefab_3;
     public float spawntime = 2f;
     private float timer =2f;    
     public AudioClip popupSound;
