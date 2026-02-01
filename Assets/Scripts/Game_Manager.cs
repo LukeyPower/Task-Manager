@@ -78,19 +78,22 @@ public class Game_Manager : MonoBehaviour
 {
     gameEnded = true;
    
+    float speedScore = 60000f / Mathf.Max(1f, timeSurvived);
 
-    finalScore =
-        (windowsClosed * 100)
-        - Mathf.RoundToInt(timeSurvived * 5f)
-        - (maxPopupsAlive * 50);
+    float chaosPenalty   = Mathf.Sqrt(maxPopupsAlive) * 800f;
+    float closurePenalty = Mathf.Sqrt(windowsClosed) * 600f;
 
-    finalScore = Mathf.Max(0, finalScore); // never negative
+    float rawScore = speedScore - chaosPenalty - closurePenalty;
 
-    Debug.Log("WIN");
-    Debug.Log("Closed: " + windowsClosed);
-    Debug.Log("Time: " + timeSurvived);
-    Debug.Log("Peak Chaos: " + maxPopupsAlive);
-    Debug.Log("Score: " + finalScore);
+    // Minimum score for any completed run
+    rawScore = Mathf.Max(rawScore, 500f);
+
+    float accuracy01 = Mathf.Clamp01(accuracy / 100f);
+    float accuracyMultiplier = Mathf.Lerp(0.75f, 1.35f, accuracy01);
+
+    finalScore = Mathf.RoundToInt(rawScore * accuracyMultiplier);
+
+
 
     UI_Manager.instance.Score();
     UI_Manager.instance.ScoreScreen.SetActive(true);

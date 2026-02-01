@@ -36,7 +36,7 @@ public class UI_Manager : MonoBehaviour
     {
         Shotcount.text = "Shots Fired: " + Game_Manager.instance.shotcount.ToString();
         Accuracy.text = "Accuracy: " + Game_Manager.instance.accuracy.ToString("F2") + "%";
-        Timeelapsed.text = "Time Survived: " + Game_Manager.instance.timeSurvived.ToString("F2") + "s";
+        Timeelapsed.text = "Time Elapsed: " + Game_Manager.instance.timeSurvived.ToString("F2") + "s";
         Popupsterminated.text = "Pop-ups Terminated: " + Game_Manager.instance.windowsClosed.ToString();
         Finalscore.text = "Final Score: " + Game_Manager.instance.finalScore.ToString();
     }

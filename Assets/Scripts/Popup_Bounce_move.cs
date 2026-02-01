@@ -12,7 +12,7 @@ public class Popup_BounceMove : MonoBehaviour
     private float objectWidth;
     private float objectHeight;
 
-    public float bottomOffset = 40f;
+    public float bottomOffset = 30f;
     public float rightsideOffset = 100f;
     public float leftsideOffset = 40f;
 
@@ -34,7 +34,7 @@ public class Popup_BounceMove : MonoBehaviour
 
         rectTransform.anchoredPosition = new Vector2(
             Random.Range(-screenBounds.x + objectWidth, screenBounds.x - objectWidth),
-            Random.Range(-screenBounds.y + objectHeight, screenBounds.y - objectHeight)
+            Random.Range(-screenBounds.y + objectHeight + bottomOffset, screenBounds.y - objectHeight)
         );
     }
     // Update is called once per frame
