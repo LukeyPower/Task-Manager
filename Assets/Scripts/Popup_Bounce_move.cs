@@ -31,6 +31,11 @@ public class Popup_BounceMove : MonoBehaviour
 
         // Set a random initial direction
         direction = Random.insideUnitCircle.normalized;
+
+        rectTransform.anchoredPosition = new Vector2(
+            Random.Range(-screenBounds.x + objectWidth, screenBounds.x - objectWidth),
+            Random.Range(-screenBounds.y + objectHeight, screenBounds.y - objectHeight)
+        );
     }
     // Update is called once per frame
     void Update()
