@@ -33,6 +33,8 @@ public class PlayerInput : MonoBehaviour
             SpawnClickEffect();
             gunshotaudio();
             shotcount++;
+            
+
         }
     }
 

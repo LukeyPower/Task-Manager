@@ -5,6 +5,8 @@ public class Game_Manager : MonoBehaviour
     public static Game_Manager instance;
     private GameObject playerinput;
 
+    private GameObject popupspawner;
+
     [Header("Game Rules")]
     public int losePopupCount = 50;
 
@@ -18,7 +20,9 @@ public class Game_Manager : MonoBehaviour
     public int finalScore = 0;
     public int shotcount;
     public float accuracy;
-        public bool gameEnded { get; private set; } = false;
+    public bool gameEnded { get; private set; } = false;
+
+    public bool gamelost = false;
 
     void Awake()
     {
@@ -27,6 +31,8 @@ public class Game_Manager : MonoBehaviour
             instance = this;
         else
             Destroy(gameObject);
+
+        popupspawner = GameObject.Find("Popup_spawner");
     }
 
     void Update()
@@ -71,6 +77,7 @@ public class Game_Manager : MonoBehaviour
    void WinGame()
 {
     gameEnded = true;
+   
 
     finalScore =
         (windowsClosed * 100)
@@ -85,12 +92,18 @@ public class Game_Manager : MonoBehaviour
     Debug.Log("Peak Chaos: " + maxPopupsAlive);
     Debug.Log("Score: " + finalScore);
 
+    UI_Manager.instance.Score();
+    UI_Manager.instance.ScoreScreen.SetActive(true);
+
     // TODO: show win UI + score
 }
 
     void LoseGame()
     {
         gameEnded = true;
+         gamelost = true;
+// Trigger endgame crash
+        popupspawner.GetComponent<Popup_spawner>().endgamecrash();
 
         Debug.Log("LOSE: Too many popups!");
 
@@ -98,6 +111,14 @@ public class Game_Manager : MonoBehaviour
         // - Show lose UI
         // - Freeze input
         // - Stop spawners
+    }
+
+    public void RestartGame()
+    {
+        // Simply reload the current scene for now
+        UnityEngine.SceneManagement.SceneManager.LoadScene(
+            UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
+        );
     }
 
     
